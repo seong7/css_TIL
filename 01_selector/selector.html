@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li{
+                /* 1. 태그 선택자*/
+                color:red;
+                text-decoration: underline;
+            }
+            #select{
+                /* 2. id 선택자 
+                       - 한번만 사용*/
+                font-size:50px;
+            }
+            .deactive{
+                /* 3. class 선택자
+                       - 여러번 사용해 그룹화하여 사용*/
+                text-decoration: line-through;
+            }
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="deactive test">HTML</li>
+            <!--여러번 사용하여 그룹화하여 style 적용할 때는
+                class를 쓰는 것이 맞다-->
+            <li id="select">CSS</li>
+            <!--한번만 사용하여 style 적용시에는
+                id 를 쓰는 것이 맞다-->
+            <li class="deactive">JavaScript</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul li{
+            /*띄어쓰기는 자식 태그 선택*/
+                color: coral;
+            }
+            #innerOL>li{
+            /* > 는 바로 아래 단계의 대상만 선택*/    
+                border:1px solid #aaccbb;
+                color:darkblue;
+                /*color 프로퍼티는 자동 상속된다.*/
+            }
+            ul, ol{
+            /* , 를 통해 다양한 선택자 선택 가능*/
+                background-color:powderblue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="outterOL">
+            <li>HTML</li>
+            <li>CSS
+                <ol id="innerOL">
+                    <li>selector</li>
+                    <li>declaration</li>
+                </ol>
+            </li>
+            <li>JavaScript</li>
+        </ol>
+    </body>
+</html>
