@@ -1,0 +1,39 @@
+<!--pseudo class selector-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            a:link{  /* a 태그 중 방문하지 않은 곳*/
+                color: grey;
+            }
+            a:visited{  /* a  태그 중 방문한 곳의 색*/
+                        /** 보안적인 이유로 visited에서는 제한적인
+                            속성 사용만 허용됨**/ 
+                color:red;
+            }
+            a:hover{  /* a 태그 중 hover 된 선택자*/
+                color:yellow;  /**** 아래에 쓰여져 있으면 우선순위 가져 
+                                   active 가 실행될 수 없으므로 위에 기입함 ****/
+                                 /* a 태그외에도 사용 가능*/
+            }
+            a:active{ /* a 태그 중 active 되어 있는 모든 선택자 */
+                color:green;   /* active = 클릭 중일 때 */
+            }
+            a:focus{  /* tab 키로 선택할 때 유용
+                         마지막에 써주는 것이 좋음 (작동 우선순위 고려)*/
+                /* background-color: black;*/
+                color:white;
+            }
+            input:focus{
+                background-color:black;
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="https://opentutorials.org">방문함</a>
+        <a href="https://a.a">방문안함</a><br/>
+        <input type=text>
+    </body>
+</html>
