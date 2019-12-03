@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                margin: 10px;
+                width: 150px; /*box의 너비 : content 영역이 default 임*/
+                /*box-sizing:content-box;  /* default */
+                /*box-sizing:border-box;  /* border를 모두 합친 크기를 기준으로 바꿈*/
+                     /*  가장 많이 사용됨 ( *{box-sizing:border-box;} 로 많이 선언함 */
+            }
+            *{
+                box-sizing:border-box;
+            }
+            #small{
+                border: 10px solid black;
+            }
+            #large{
+                border: 30px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="small">Hello</div>
+        <div id="large">Hello</div>
+    </body>
+</html>
