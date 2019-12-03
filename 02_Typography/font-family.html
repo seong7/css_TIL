@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            #type1{
+                font-size:2rem;
+                font-family:arial, verdana, "Helvetica Neue", serif, monospace;
+            /*먼저 나열된 것 부터 적용하고 폰트가 없을 경우 다음 것 적용*/
+            
+            /* 폰트 명에 space 가 있으면 "" 꼭 넣어준다.*/
+
+            /* monospace*/
+            /*  : 문자당 폭을 고정하여 일목요연한 느낌*/
+                
+            
+                font-weight: bold;
+                line-height: 1.2;  /* font 크기의 해당 값의 배만큼 위아래 간격 조정
+                                        default : 1.2*/
+                /** line-height: 20px;  고정 값을 주면 어색해짐*/
+                
+            }
+            #type2{
+                font: bold 2rem/1.2 /*_line-height*/ arial, verdana, "Helvetica Neue", serif, monospace; 
+                /* 폰트 설정 종합적으로 나열 */
+            }
+        </style>
+    </head>
+    <body>
+        <p id="type1">
+            Hello World
+            <br/>
+            Hello World
+        </p>
+        <p id="type2">
+            Hello World
+            <br/>
+            Hello World
+        </p>
+    </body>
+</html>

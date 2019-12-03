@@ -1,0 +1,44 @@
+<!--
+    web font 는 클라이언트가 폰트를 보유하고 있지 않아도
+    폰트를 적용할 수 있게 하는 기법
+
+    - 서버주소를 통해 클라이언트가 폰트를 자동으로 다운받도록함
+-->
+<!doctype html>
+<html>
+    <head>
+        <!-- font server 주소 link -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Nanum+Pen+Script|Shadows+Into+Light&display=swap" rel="stylesheet">
+        
+        <style>
+            /* link 로 불러온 폰트들을 해당 파일에 지정*/
+            #font1{
+                font-size:4rem;
+                padding-left: 3rem;
+                font-family:'Shadows Into Light', cursive;
+            }
+            #font2{
+                font-size:4rem;
+                padding-left: 3rem;
+                font-family:'Nanum Pen Script', cursive;
+
+            }
+            #font3{
+                font-size:4rem;
+                padding-left: 3rem;
+                font-family:'Lobster', cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="font1">
+            Hello World
+        </p>
+        <p id="font2">
+                Hello World
+        </p>
+        <p id="font3">
+                Hello World
+        </p>
+    </body>
+</html>
