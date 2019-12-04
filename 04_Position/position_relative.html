@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+    <style>
+        html{border:1px solid gray;}
+        div{
+            border:5px solid tomato;
+            margin:10px;
+        }
+        #me{
+            
+            /* position: static   = 각 요소들의 default 위치에 고정됨 (조절 불가능) */
+            
+            position:relative;  /* 부모 요소를 기준으로 방향 별로 offset을 주어 위치 조정 가능*/
+            right:100px; /* offset */
+            left:100px;          /* 우선순위 left > right (코드 위치 상관 없음*/
+            top:100px;
+            bottom:100px;        /* 우선순위 top > bottom (코드 위치 상관 없음*/
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="parent">
+        parent
+        <div id="me">me</div>
+    </div>
+</body>
+</html>
