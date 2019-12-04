@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                height:100vh;
+                /* margin:0px; */
+
+                display:flex;
+                align-items:center;      /* column 기준 가운데 정렬 */
+                justify-content:center;  /* row 기준 가운데 정렬 */
+            }
+            .container{
+                display:flex;
+                flex-direction: column;
+                /* margin:0px */
+                width:1000px;
+                border: 1px solid gray;
+            }
+            header{
+                border-bottom:1px solid gray;
+                padding-left:20px;
+                min-width: 800px;
+                /* margin:0px; */
+            }
+            footer{
+                border-top:1px solid gray;
+                padding:20px;
+                text-align:center;
+                min-width: 800px;
+            }
+            .content{
+                display:flex;
+            }
+            .content nav{
+                border-right:1px solid gray;
+            }
+            .content aside{
+                border-left:1px solid gray;
+            }
+            .content main{
+                /* flex-basis:500px;  설정 X */
+                /*flex-shrink:1; /* 설정 안해도 됨 default 임 */
+
+                padding:10px;
+                min-width: 300px;
+                flex-shrink:0;
+            }
+            .content aside, nav{
+                flex-basis:150px;
+                flex-shrink:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>생활코딩</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li>html</li>
+                        <li>css</li>
+                        <li>javascript</li>
+                    </ul>
+                </nav>
+                <main>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nulla nesciunt earum necessitatibus id, 
+                </main>
+                <aside>
+                    AD
+                </aside>
+            </section>
+            <footer>
+                <a href="https://opentutorials.org/coure/1">홈페이지</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        .container{
+            background-color:powderblue;
+            height:200px;
+            display:flex;  /* 정렬을 조절할 element 들의 부모에게 선언해야함 */
+            flex-direction:row-reverse;  /* row : 행의 방향에서 정렬 방법
+                                    (default = row)
+                                 **flex-direction 설정 안했을 때의 default 이기도 함** */
+            flex-direction:column-reverse; /* column : 열의 방향에서 정렬 방법 (default = column) */
+        }
+        .item{
+            background-color:tomato;
+            color:white;
+            border:1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>       
+    </div>
+</body>
+</html>

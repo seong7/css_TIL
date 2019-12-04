@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        .container{
+            background-color:rgb(69, 109, 114);
+            height:200px;
+            display:flex; 
+            flex-direction:row;
+        }
+        .item{
+            background-color:tomato;
+            color:white;
+            border:1px solid white;
+        }
+        .item:nth-child(2){
+            flex-basis:150px;  /* diplay:flex 인 부모 요소내에서
+                                해당 요소의 절대적인 크기 나타냄 */
+                               /* flex-shrink:1 이 default 로 적용되어 
+                                  브라우저의 크기에 따라 해당 요소의 크기도 변한다.*/
+           
+           /*  shrink 는 basis로 요소의 절대크기들이 설정되어 있을 때 사용 가능 */
+            flex-shrink:0;      /* 0일때는 브라우저의 크기와 상관없이 크기가 고정된다.
+                            ** 중요 ** 각각의 요소에 따로 설정해야하고 
+                                       설정한 요소마다 독립적으로 적용된다. */
+        }
+        .item:nth-child(1){
+            flex-basis:150px;
+            flex-shrink:1;   /* 1이므로 1번 .item 은 브라우저의 크기에 따라 크기가 변한다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>       
+    </div>
+</body>
+</html>

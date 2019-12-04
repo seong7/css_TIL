@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head>
+    <style>
+        #grand, #parent, #other{
+            border:5px solid tomato;
+        }
+        #grand{
+            position:relative;
+        }
+        /* #parent{
+            position:relative;
+        } */
+        #me{
+            background-color:black;
+            color:white;
+
+            /* position:relative;  = 부모 요소를 기준으로 offset 만큼 이동 */
+            position:absolute; /* 부모 중 position 이 absolute가 아닌 인접한 부모 순서로 기준을 잡고
+                                  없으면 html 전체를 기준으로 offet 만큼 이동 
+                                  default 위치는 부모의 아래 */
+                               /* position:absolute 하면 부모와 링크가 없어짐 (즉 크기를 직접 따로 지정해줘야함) */
+            left:0px;
+            top:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+    <div id="grand">
+        grand
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </div>
+</body>
+</html>
