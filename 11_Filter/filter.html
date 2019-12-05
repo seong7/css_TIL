@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+        }
+        body{
+            display:flex;
+            flex-direction: column;
+        }
+        h1{
+            display: inline;
+            width:200px;
+            filter: blur(10px);
+        }
+        img{
+            width:200px;
+            font-weight: 300px;
+            transform:scale(1);
+            transition: .3s;
+        }
+        img:hover{
+            /* filter 는 비교적 새로나와서 아직 지원되지 않는 브라우저 있을 수 있음 */
+            /* -webkit- : chrome, safari 등에 쓰는 vendor prefix*/
+            /* -o- : opera 등에 쓰는 vendor prefix*/
+            /* -webkit-filter: ; */
+            /* -o-filter: ; */
+            /* 모든브라우저에서 적용될 때는 위의 것들 없어짐*/
+            
+            /* 흑백 적용 비율*/
+            filter: grayscale(70%);
+            /* filter: grayscale(30%) blur(3px);  다중 적용 가능 */
+            
+            width:200px;
+            font-weight: 300px;
+            transform:scale(1.009);
+            transition:.3s;
+        }    
+        h1:hover{
+            /* text blur 효과 (px 단위_ 수 클 수록 정도 높아짐*/
+            filter: blur(0px);  
+
+
+            transition: all 1s;
+            /* 선택된 all(모든) 요소에 1초의 변화 시간 지정 */
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter Test</h1>
+    <img src="test_img.png" alt="실패">
+</body>
+</html>
