@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                /* height:100vh; */
+                /* margin:0px; */
+
+                display:flex;
+                /*align-items:center;      /* column(세로) 가운데 정렬 */
+                justify-content:center;  /* row(가로) 가운데 정렬 */
+            }
+            .container{
+                display:flex;
+                flex-direction: column;
+                /* margin:0px */
+                width:1000px;
+                border: 1px solid gray;
+            }
+            header{
+                border-bottom:1px solid gray;
+                padding-left:20px;
+                min-width: 800px;
+                /* margin:0px; */
+            }
+            footer{
+                border-top:1px solid gray;
+                padding:20px;
+                text-align:center;
+                min-width: 800px;
+            }
+            .content{
+                display:flex;
+                flex-direction:column;
+            }
+            .content nav{
+                border-right:1px solid gray;
+            }
+            .content aside{
+                border-left:1px solid gray;
+            }
+            .content main{
+                /* flex-basis:500px;  설정 X */
+                /*flex-shrink:1; /* 설정 안해도 됨 default 임 */
+                padding:10px;
+                min-width: 300px;
+                /* flex-shrink:0; */
+            }
+            .content aside, nav{
+                flex-basis:150px;
+                flex-shrink:0;
+            }
+            @media(min-width:1000px){
+               .content{
+                    flex-direction:row;
+               }
+            }
+            @media(max-width:1000px){
+                .content nav {
+                    border-right:none;
+                    border-bottom:1px solid grey;
+                    flex-basis:auto;
+                    order:1;  /* flex 의 순서 */
+                }
+                .content aside {
+                    border-top:1px solid grey;
+                    border-left:none;
+                    flex-basis:auto;
+                    order:2;
+                    /* display : none;   없앨 수 있음*/
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>생활코딩</h1>
+            </header>
+            <section class="content">
+                <nav>
+                    <ul>
+                        <li>html</li>
+                        <li>css</li>
+                        <li>javascript</li>
+                    </ul>
+                </nav>
+                <main>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, nemo. Eligendi praesentium repudiandae iusto repellendus odio ex facere tenetur doloribus. Rerum enim veritatis eveniet molestiae non minus, vitae consectetur earum. Ex omnis eligendi soluta inventore corporis itaque assumenda blanditiis, cum animi ullam reiciendis sit, odio aliquid quas provident ea aperiam corrupti nam ratione. Sed consequatur enim necessitatibus veritatis obcaecati reprehenderit nulla dolore corrupti blanditiis labore facilis minus excepturi molestias sit illo ex modi repellendus, ut, sunt et fuga? Saepe possimus animi, provident officiis sint, itaque harum ipsa nam nesciunt ea autem eos magni labore nulla maxime quod officia! Voluptatem, harum! Fugiat incidunt quibusdam animi voluptates officia fugit cupiditate explicabo mollitia perspiciatis eaque labore aspernatur eum expedita sit quo, quaerat, perferendis fuga distinctio. Reiciendis dolor consectetur molestiae esse. Sint, ex placeat quaerat maiores libero modi. Voluptate dolore labore veritatis saepe itaque ipsa consequatur illum deleniti at autem aspernatur iure perspiciatis nihil aperiam nemo vero, eaque alias. Sint exercitationem quam voluptatem eveniet aliquid architecto quis id fugiat veritatis quasi provident necessitatibus dignissimos quaerat assumenda, est quae tenetur dolorem velit? Ullam esse laudantium obcaecati veniam quia fuga, maiores tenetur, illo dolor nulla porro, recusandae modi similique fugit consectetur ab voluptatum? Tempora maxime ullam necessitatibus? Dicta eum nobis veniam omnis ad dignissimos, quibusdam blanditiis atque. Vero delectus ut quae iure placeat molestias reprehenderit assumenda corrupti iusto. Laudantium debitis deleniti doloremque sunt, eius facilis soluta voluptate facere, modi laborum voluptates quia temporibus. Earum aliquam accusamus velit rem enim, placeat et cumque dolore, vitae laborum harum hic reiciendis quo possimus neque mollitia dolorem! Vitae, impedit similique recusandae, deleniti optio debitis ullam culpa totam ad alias harum quaerat architecto ipsa repellendus voluptatum. Iste harum commodi, praesentium et nulla laboriosam repellat! Hic reiciendis vitae sint neque adipisci fugit, placeat excepturi ad commodi, eveniet accusantium, dolor totam voluptatem dolores doloremque. Suscipit, cumque voluptatibus. Aspernatur eaque dolorum reprehenderit temporibus architecto sunt voluptate quia ratione eius quae. Incidunt, nisi quas nam similique nesciunt at dolore temporibus sed rem voluptatem. Repellendus rerum enim eligendi ea inventore aperiam sapiente doloremque sunt. Minus dolorum quis, exercitationem quaerat asperiores doloribus impedit eligendi dolorem et, sapiente eveniet enim odio repellendus quos veritatis! Ab explicabo nostrum impedit architecto id voluptatum ipsum iusto, rerum sequi repudiandae. Placeat, modi quod et voluptas, obcaecati, quam optio cupiditate temporibus libero itaque excepturi numquam tenetur eligendi non fugiat aut quasi sit dolores molestias. Veritatis deleniti quam aliquam rerum est quaerat voluptate. Explicabo quia sapiente cupiditate odit culpa magnam eius, repudiandae unde eaque sunt omnis, qui ullam minima vero ad adipisci blanditiis molestias quis nihil temporibus ab? Magnam fugit expedita inventore vitae repellendus aliquam, aperiam unde est eos dolor reiciendis ullam nisi dolore error natus aspernatur quis cumque minus sed provident omnis ea nihil similique tempore. Explicabo nesciunt officiis illum, aspernatur quos est voluptas! Voluptas exercitationem mollitia impedit corrupti magni deserunt accusamus nisi sed, ducimus, dolorum expedita aliquid et sapiente inventore repellendus, voluptatum fugiat eum voluptatibus nemo eaque. Praesentium quos magnam quia suscipit id nemo delectus quidem illo maxime necessitatibus rerum provident nobis beatae sit maiores, accusantium voluptatibus quae aspernatur exercitationem qui quasi enim. Error modi aspernatur saepe reiciendis itaque, accusamus ad facere perspiciatis qui cupiditate alias inventore incidunt nobis neque velit autem harum, commodi voluptate ab totam vel rem quibusdam? Repellat, dolore vel! Vitae, voluptatibus magni soluta perferendis tempora obcaecati fuga repellat corrupti adipisci odit accusamus provident quam dolorum numquam ut officia, maxime ea esse? Modi error adipisci provident sit harum delectus alias architecto cum exercitationem qui cumque magnam, doloremque odit. Tempore, illo! Nesciunt sed eius sint necessitatibus magnam animi iusto distinctio facere aliquam beatae quae, tempora est placeat aspernatur ea quo assumenda labore ullam. Nam quaerat non, ratione incidunt maiores possimus vitae amet cum placeat ducimus hic aperiam temporibus exercitationem eveniet magnam quibusdam culpa qui asperiores ea quidem rerum rem nisi cumque! Quidem, id exercitationem. Autem earum cupiditate reprehenderit eveniet molestias temporibus nobis perferendis! Id vitae delectus voluptatibus nostrum quia! Praesentium voluptatibus temporibus culpa excepturi vel cumque, odio repellendus, ratione saepe cupiditate eaque asperiores omnis dolores vero corrupti! Molestiae qui, enim hic earum totam veniam blanditiis quibusdam ducimus recusandae sed nisi nulla, possimus nam rerum sunt provident sequi delectus quas cumque atque voluptas. Sunt, nemo odio nisi velit praesentium molestiae. Tempore tenetur ea cupiditate dolorum maxime a, sapiente enim vitae ut, ullam officiis ipsa labore porro asperiores suscipit molestiae laboriosam quae est nostrum vel aut deleniti adipisci. Sint doloribus nam quidem architecto delectus recusandae, molestiae magnam beatae unde facere aliquid dolorem hic dignissimos quia quibusdam, dolor pariatur id? Quaerat ipsum eveniet omnis odio adipisci ratione, odit debitis totam nihil deserunt rem perferendis sequi placeat velit veniam laborum hic architecto reprehenderit quidem id dolores! Ab recusandae eos, quaerat quisquam quos nobis voluptate quod numquam eius magni doloribus tempore quas necessitatibus velit temporibus nostrum aliquam voluptas! Sit nihil tenetur necessitatibus repudiandae, laborum culpa, quas omnis eveniet voluptatibus quos totam quibusdam eaque minus cum mollitia similique quae quaerat reprehenderit voluptatum inventore. Inventore earum quia hic nam nihil eveniet animi! Quas molestiae blanditiis quisquam eaque a officiis tempora ducimus soluta, modi nihil id atque iste explicabo? Ab culpa quis, sequi illum aliquam dolore consequuntur facilis magnam quae tempora minus fugit debitis dolor autem atque sed unde explicabo quaerat distinctio libero? Quo facilis laborum debitis quia, placeat corporis aliquid suscipit nemo. Ea dolorum quo provident quibusdam commodi! Rem mollitia illo ducimus amet quod voluptatibus autem! Fugit dolorem dolore a earum obcaecati quia sit ducimus ex sapiente! Doloremque blanditiis saepe est odit, cum possimus sit quaerat ipsum quasi officia pariatur. Eligendi quo sequi similique ducimus iste temporibus quos tempore consectetur ipsa sunt molestias dolor amet maiores neque labore magnam, possimus quidem officia ratione magni doloremque asperiores molestiae voluptate. Alias quisquam consectetur dolorem minus facilis eligendi asperiores ex mollitia harum possimus quidem rerum ratione eum accusantium at, necessitatibus soluta voluptatum. Ducimus ipsam voluptatem perferendis, cumque, totam pariatur ullam tempore reprehenderit, sint fugit obcaecati dolorem debitis eius porro explicabo repellendus delectus corporis maxime repudiandae. Sint labore repellendus, quae nesciunt voluptatibus et amet unde neque repudiandae esse quos dolorum dolore.
+                </main>
+                <aside>
+                    AD
+                </aside>
+            </section>
+            <footer>
+                <a href="https://opentutorials.org/coure/1">홈페이지</a>
+            </footer>
+        </div>
+    </body>
+</html>
