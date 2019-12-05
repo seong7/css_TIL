@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, intitial-scale-1.0">
+    <!-- 브라우저에서 media query 적용 확인하기 위한 meta 세팅 -->
+
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            height:100vh;
+            /* width:100vh; */
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:center;
+            color: white;
+        }
+        div{
+            text-align: center;
+            background-color:teal;
+            border:1px solid white;
+            height:100px;
+            padding:10px;
+
+            flex-grow:1;
+        }
+        @media(min-width: 801px){
+            body{
+                background-color:blue;
+            }
+        }
+        @media(max-width:800px){
+            body{
+                background-color:green;
+            }      
+        }
+        @media(max-width:500px){
+            body{
+                background-color:red;
+            }      
+        }
+    </style>
+</head>
+<body>
+    <div>
+        ~500px : red <br/>
+     501~600px : green <br/>
+        601px~ : blue 
+    </div>
+    <div>
+        ㅋㅋㅋ
+    </div>
+</body>
+</html>

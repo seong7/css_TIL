@@ -11,26 +11,21 @@
         .item{
             background-color:tomato;
             color:white;
-            border:1px solid white;
-            flex-grow:1; /* 요소들이 동일한 크기로 부모 영역을 꽉채운다.*/ 
-                          /* int 로 설정가능
-                            : 전체 flex-grow 값에 대한 크기 비율 */
+            border-right:1px solid white;
         }
         .item:nth-child(2){
-            flex-grow:2;  /* 전체 flex-grow 값에 대한 해당 요소가 차지하는 비율임 */
-            
-            
-            /*flex-basis:150px;  /* diplay:flex 인 부모 요소내에서
+            flex-basis:150px;  /* diplay:flex 인 부모 요소내에서
                                 해당 요소의 절대적인 크기 나타냄 */
                                /* flex-shrink:1 이 default 로 적용되어 
                                   브라우저의 크기에 따라 해당 요소의 크기도 변한다.*/
            
-           flex-shrink:0;      /* 0일때는 브라우저의 크기와 상관없이 크기가 고정된다.
+           /*  shrink 는 basis로 요소의 절대크기들이 설정되어 있을 때 사용 가능 */
+            flex-shrink:0;      /* 0일때는 브라우저의 크기와 상관없이 크기가 고정된다.
                             ** 중요 ** 각각의 요소에 따로 설정해야하고 
                                        설정한 요소마다 독립적으로 적용된다. */
         }
         .item:nth-child(1){
-            /*flex-basis:150px;*/
+            flex-basis:150px;
             flex-shrink:1;   /* 1이므로 1번 .item 은 브라우저의 크기에 따라 크기가 변한다. */
         }
     </style>
