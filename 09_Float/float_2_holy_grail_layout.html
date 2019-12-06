@@ -1,0 +1,72 @@
+<!-- float 보다는 display: flex 를 쓰는 것이 훨씬 편함 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        .body_wrapper{
+            /*  float 은 본인이 위치할 공간이 없으면
+                아래쪽으로 내려간다.
+                이를 방지하기 위해 body wrapper로 body를 감싸고
+                wrapper 의 너비를 지정해준다.  */
+            width:540px;
+            border:1px solid grey;
+        }
+        header{
+            border-bottom:1px solid gray;
+        }
+        nav{
+            float: left;
+            width:120px;
+            border-right:1px solid grey;
+        }
+        article{
+            float:left;
+            width:300px;
+            border-left:1px solid grey;
+
+            margin-left:-1px; /* nav 의 border 와 겹치는 부분을 완전 겹치게 해서 굵기 차이 없도록 조정  */
+            border-right:1px solid grey;
+        }
+        aside{
+            float:left;
+            width:120px;
+            border-left:1px solid grey;
+            margin-left:-1px;
+        }
+        footer{
+            clear:left;  /* float left 인 위의 세 요소의 영향을 받지 않음 */
+            border-top:1px solid gray;
+            text-align:center;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body_wrapper">
+        <header>
+            <h1>
+                CSS
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li>position</li>
+                <li>float</li>
+                <li>flex</li>
+            </ul>
+        </nav>
+        <article>
+            <h2>float</h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam fuga dolor dolores quod sint iste accusantium earum obcaecati repellendus? Ratione a vero reprehenderit nobis velit exercitationem, commodi deleniti quasi sapiente, at error earum alias facilis officia! Perferendis rem, doloremque magni, voluptatum maxime illo itaque fuga a voluptatem sequi delectus quis.
+        </article>
+        <aside>
+            AD
+        </aside>
+        <footer>copyright</footer>
+    </div>
+</body>
+</html>
