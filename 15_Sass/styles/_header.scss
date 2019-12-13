@@ -1,0 +1,46 @@
+// @mixin flexCenter{   
+//     height:100vh;
+//     display: flex;
+//     justify-content:center;
+//     color: $textColor;
+//     align-items: center;
+// }
+
+/*  위처럼 매개변수 없이 선언하여 @include 가능*/
+/*  아래처럼 매개변수와 함께 선언하여 @include 가능*/
+
+// @mixin flexCenter($direction, $background){
+//     height:100vh;
+//     display: flex;
+//     justify-content:center;
+//     color: $textColor;
+//     align-items: center;
+//     flex-direction: $direction;  // 중요 !!
+//     background-color: $background // 중요!!
+// }
+
+
+
+
+header{
+
+    // @include flexCenter(column, blue);  /* 위에서 지정한  */
+
+    
+
+    height: 100vh;
+    color: $textColor;
+    background:lightblue;
+    button{
+        background: $primaryBtn;
+        &:hover{
+            background:red;
+            // &::after{  
+            //     content: "Hellooo";  //기존 text Hello 의 뒤에 Hellooo추가함
+            // }
+        }
+        &::after{
+            content: "Hellooo"; 
+        }
+    }
+}

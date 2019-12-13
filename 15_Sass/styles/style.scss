@@ -1,0 +1,12 @@
+
+/** 변수파일을 먼저 imoport 해야 header에서 적용가능 !!!  *******/
+@import './variables'; // 변수들을 따로 선언후 import 가능
+@import './header';  // import 할 파일명에 _ (underscore) 붙여야함!
+
+.contact {
+    // @include flexCenter(row, lightblue);
+
+    @extend header;  // header 의 스타일을 상속받음
+    background-color: lightcoral;  // 상속받은 것을 overwrite 함
+    width: 100%-20%; // 계산도 됨
+}

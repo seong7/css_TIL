@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/** 변수파일을 먼저 imoport 해야 header에서 적용가능 !!!  *******/
+/*  위처럼 매개변수 없이 선언하여 @include 가능*/
+/*  아래처럼 매개변수와 함께 선언하여 @include 가능*/
+header, .contact {
+  height: 100vh;
+  color: rgba(253, 4, 66, 0.809);
+  background: lightblue;
+}
+
+header button, .contact button {
+  background: #6c3b0e;
+}
+
+header button:hover, .contact button:hover {
+  background: red;
+}
+
+header button::after, .contact button::after {
+  content: "Hellooo";
+}
+
+.contact {
+  background-color: lightcoral;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */
