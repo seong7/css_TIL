@@ -24,7 +24,7 @@
 
 header{
 
-    // @include flexCenter(column, blue);  /* 위에서 지정한  */
+    // @include flexCenter(column, blue);  /* 위에서 지정한 mixin 호출하기 */
 
     
 
@@ -34,7 +34,7 @@ header{
     button{
         background: $primaryBtn;
         &:hover{
-            background:red;
+            background:blue;
             // &::after{  
             //     content: "Hellooo";  //기존 text Hello 의 뒤에 Hellooo추가함
             // }

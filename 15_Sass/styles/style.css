@@ -13,7 +13,7 @@ header button, .contact button {
 }
 
 header button:hover, .contact button:hover {
-  background: red;
+  background: blue;
 }
 
 header button::after, .contact button::after {
