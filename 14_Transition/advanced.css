@@ -1,0 +1,23 @@
+div{
+  width: 100px;
+  height: 100px;
+  background: red;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* safari */
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div:hover{
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(180deg); /* safari */
+  transform: rotate(180deg);
+}
+
+/*  transform 효과로 박스가 회전하며 늘어남 */
+
+/*
+  transition-property: (width, height)  : 늘어나는 가로, 세로폭 지정
+  trasition-duration: (n)s;             : 지속시간 
+  transition-timing-function: ();       : 속도의 곡선을 지정
+  transition-delay: (n)s;               : 지정한 시간의 딜레이 후 시작
+*/
