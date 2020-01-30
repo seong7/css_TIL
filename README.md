@@ -11,4 +11,4 @@
 
 ### Memo
 1. Hover : target element 의 동등 또는 하위 레벨의 element 만 조작 가능
-2. z-index : 동작 안할 때 -1 설정해보기
+2. z-index : 우선 position 이 absolute, relative, fixed 중 하나로 설정되어야 함 / 동작 안할 때 -1 설정해보기
