@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .wrapper{
+            width: 1000px;
+            clear: both;
+            content: "";
+            display: table;
+        }
+        .content{
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            height: 300px;
+            width: 29.33%;
+            margin: 1%;
+            padding: 1%;
+            /* overflow: hidden;    */
+        }
+        .first{
+            background-color: coral;
+            float: right;
+        }
+        .second{
+            background-color: blueviolet;
+            float: left;
+        }
+        .third{
+            background-color: cornflowerblue;
+            float: left;
+        }
+        .fourth{
+            background-color: darkseagreen;
+            float: left;
+        }
+
+        .inner_cont_wrapper{
+            /* float: left; */
+            padding: 10px;
+            overflow: hidden;
+            /* 버튼이 아래에 있을 때 hover 작동 x */
+            z-index: 1;
+        }
+        .text{
+            float: left;
+            height: 200px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        /*************/
+        /*   X 버튼  */
+        /*************/
+        .delete_btn{
+            transform: translateY(50px);
+            transition: transform 0.3s;
+            font-size: inherit;
+            color: inherit;
+            /* color: red; */
+            padding: 0;
+
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 0;
+        }
+        /* EVENT */
+        .inner_cont_wrapper:hover
+        .delete_btn{
+            transform: translateY(5px);
+        }
+        .delete_btn:active {
+            /* transform: translateY(8px); */
+            /* transform: scale(2, 2); */
+            /* transform 을 이벤트에 또 적용할 수 없음*/
+            font-size: 1.9rem;
+        }
+
+
+
+         /*************/
+        /*   그래프  */
+        /*************/
+        .graph_wrapper{
+            font-size: 18px;
+            /* float: right; */
+            transform: translate(0px, -220px);
+            /* transition: transform 2s; */
+            transition: all 1.5s;
+            display: block;
+            /* overflow: hidden; */
+            z-index: -1;
+        }
+        .graph{
+            margin: 1%;
+            padding: 1%;
+            height: 23%;
+        }
+        .g1{
+            background-color: rgb(192, 133, 247);
+            width: 100px;
+            transition : width 0.5s;
+        }
+        .g2{
+            background-color: rgb(243, 149, 105);
+            width:100px;
+            transition : width 1s;
+        }
+        .g3{
+            background-color: rgb(243, 105, 116);
+            width:100px;
+            transition : width 1.5s;
+        }
+        .g4{
+            background-color: rgb(138, 247, 255);
+            width:100px;
+            transition : width 2s;
+        }
+        /* EVENT */
+        .fourth:hover
+        .graph_wrapper{
+            /* transition-duration: 2s; */
+            transform: translate(300px, -220px);
+        }
+        .fourth:hover
+        .g1{
+            transition-duration: 0.5s;
+            width:150px;
+        }
+        .fourth:hover
+        .g2{
+            transition-duration: 1s;
+            width:300px;
+        }
+        .fourth:hover
+        .g3{
+            transition-duration: 1.5s;
+            width:450px;
+        }
+        .fourth:hover
+        .g4{
+            transition-duration: 2s;
+            width:600px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content fourth">4번 구역
+            <div class="inner_cont_wrapper">
+                <div class="text">
+                    <span class="span">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, totam quis assumenda laborum facilis vero odio perferendis reprehenderit nobis quae quia nihil nostrum, aliquid saepe aspernatur, accusamus earum explicabo hic!</span>
+                </div>
+                <div class="cont_delete">
+                    <button class="delete_btn"><i class="ion-ios-close-outline"></i></button>
+                </div>
+            </div>
+            <div class="graph_wrapper">
+                <div class="g1 graph">1번 그래프
+                    
+                </div>
+                <div class="g2 graph">2번 그래프</div>
+                <div class="g3 graph">3번 그래프</div>
+                <div class="g4 graph">4번 그래프</div>
+            </div>
+        </div>
+    </div>
+</body>

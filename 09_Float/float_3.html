@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <style>
+            .wrapper{
+                width: 1000px;
+                clear: both;
+                content: "";
+                display: table;
+            }
+            .content{
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                height: 300px;
+                width: 29.33%;
+                margin: 1%;
+                padding: 1%;
+            }
+            .first{
+                background-color: coral;
+                float: right;
+            }
+            .second{
+                background-color: blueviolet;
+                float: left;
+            }
+            .third{
+                background-color: cornflowerblue;
+                float: left;
+            }
+
+            .inner_cont_wrapper{
+                padding: 10px;
+                overflow: hidden;   /* 버튼이 아래에 있을 때 hover 작동 x*/
+            }
+            .text{
+                height: 200px;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            .delete_btn{
+                transform: translateY(50px);
+                transition: transform 0.3s;
+            }
+            .ion-ios-close-outline{
+                cursor: pointer;
+            }
+
+            /* EVENT */
+            .inner_cont_wrapper:hover
+            .delete_btn{
+                transform: translateY(5px);
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content first">1번 구역
+                <div class="inner_cont_wrapper">
+                    <div class="text">
+                        <span class="span">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, totam quis assumenda laborum facilis vero odio perferendis reprehenderit nobis quae quia nihil nostrum, aliquid saepe aspernatur, accusamus earum explicabo hic!</span>
+                    </div>
+                    <div class="delete_btn">
+                        <i class="ion-ios-close-outline"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content second">2번 구역
+                <div class="inner_cont_wrapper">
+                    <div class="text">
+                        <span class="span">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, totam quis assumenda laborum facilis vero odio perferendis reprehenderit nobis quae quia nihil nostrum, aliquid saepe aspernatur, accusamus earum explicabo hic!</span>
+                    </div>
+                    <div class="delete_btn">
+                        <i class="ion-ios-close-outline"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content third">3번 구역
+                <div class="inner_cont_wrapper">
+                    <div class="text">
+                        <span class="span">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, totam quis assumenda laborum facilis vero odio perferendis reprehenderit nobis quae quia nihil nostrum, aliquid saepe aspernatur, accusamus earum explicabo hic!</span>
+                    </div>
+                    <div class="delete_btn">
+                        <i class="ion-ios-close-outline"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
