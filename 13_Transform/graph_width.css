@@ -1,0 +1,181 @@
+@charset "UTF-8";
+.wrapper {
+  width: 1000px;
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  height: 300px;
+  width: 29.33%;
+  margin: 1%;
+  padding: 1%;
+  /* overflow: hidden;    */
+}
+
+.first {
+  background-color: coral;
+  float: right;
+}
+
+.second {
+  background-color: blueviolet;
+  float: left;
+}
+
+.third {
+  background-color: cornflowerblue;
+  float: left;
+}
+
+.fourth {
+  background-color: darkseagreen;
+  float: left;
+}
+
+.inner_cont_wrapper {
+  /* float: left; */
+  padding: 10px;
+  overflow: hidden;
+  /* 버튼이 아래에 있을 때 hover 작동 x */
+  z-index: 1;
+  position: relative;
+}
+
+.text {
+  float: left;
+  height: 200px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/*************/
+/*   X 버튼  */
+/*************/
+.delete_btn {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  font-size: inherit;
+  color: inherit;
+  /* color: red; */
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+/* EVENT */
+.inner_cont_wrapper:hover
+.delete_btn {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  outline: none;
+}
+
+.delete_btn:active {
+  /* transform: translateY(8px); */
+  /* transform: scale(2, 2); */
+  /* transform 을 이벤트에 또 적용할 수 없음*/
+  font-size: 1.9rem;
+}
+
+/*************/
+/*   그래프  */
+/*************/
+.graph_wrapper {
+  font-size: 18px;
+  /* float: right; */
+  -webkit-transform: translate(0px, -295px);
+          transform: translate(0px, -295px);
+  /* transition: transform 2s; */
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  display: block;
+  /* overflow: hidden; */
+  z-index: -1;
+  height: 80%;
+  position: relative;
+}
+
+.graph {
+  margin: 5%;
+  padding: 2%;
+  height: 18%;
+  line-height: 2.5;
+}
+
+.g1 {
+  background-color: #c085f7;
+  width: 100px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.g2 {
+  background-color: #f39569;
+  width: 100px;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.g3 {
+  background-color: #f36974;
+  width: 100px;
+  -webkit-transition: width 1.5s;
+  transition: width 1.5s;
+}
+
+.g4 {
+  background-color: #8af7ff;
+  width: 100px;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+/* EVENT */
+.fourth:hover
+.graph_wrapper {
+  /* transition-duration: 2s; */
+  -webkit-transform: translate(288px, -295px);
+          transform: translate(288px, -295px);
+}
+
+.fourth:hover
+.g1 {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 150px;
+}
+
+.fourth:hover
+.g2 {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  width: 300px;
+}
+
+.fourth:hover
+.g3 {
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  width: 450px;
+}
+
+.fourth:hover
+.g4 {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  width: 600px;
+}
+/*# sourceMappingURL=graph_width.css.map */
